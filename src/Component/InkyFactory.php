@@ -28,11 +28,11 @@ class InkyFactory extends AbstractComponentFactory
      * </tr>
      *
      * @param HtmlNode $element
-     * @param Inky $inkyInstance
+     * @param InkyPHP $inkyInstance
      *
      * @return HtmlNode
      */
-    public function parse(HtmlNode $element, Inky $inkyInstance)
+    public function parse(HtmlNode $element, InkyPHP $inkyInstance)
     {
         $tr = $this->tr();
         $td = $this->td();

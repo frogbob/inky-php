@@ -50,11 +50,11 @@ class ButtonFactory extends AbstractComponentFactory
      * </table>
      *
      * @param HtmlNode $element
-     * @param Inky $inkyInstance
+     * @param InkyPHP $inkyInstance
      *
      * @return HtmlNode
      */
-    public function parse(HtmlNode $element, Inky $inkyInstance)
+    public function parse(HtmlNode $element, InkyPHP $inkyInstance)
     {
         $attributes = $element->getAttributes();
         if(isset($attributes['href'])) {

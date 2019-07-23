@@ -29,11 +29,11 @@ class SpacerFactory extends AbstractComponentFactory
      * </table>
      *
      * @param HtmlNode $element
-     * @param Inky $inkyInstance
+     * @param InkyPHP $inkyInstance
      *
      * @return HtmlNode
      */
-    public function parse(HtmlNode $element, Inky $inkyInstance)
+    public function parse(HtmlNode $element, InkyPHP $inkyInstance)
     {
         if($element->getAttribute('size-sm') || $element->getAttribute('size-lg'))
         {
@@ -55,11 +55,11 @@ class SpacerFactory extends AbstractComponentFactory
      * </table>
      *
      * @param HtmlNode $element
-     * @param Inky $inkyInstance
+     * @param InkyPHP $inkyInstance
      *
      * @return HtmlNode
      */
-    protected function parseNormal(HtmlNode $element, Inky $inkyInstance)
+    protected function parseNormal(HtmlNode $element, InkyPHP $inkyInstance)
     {
         $size = $element->getAttribute('size') ? (int) $element->getAttribute('size') : 16;
         $table = $this->table($this->getUsableAttributes($element));
@@ -98,11 +98,11 @@ class SpacerFactory extends AbstractComponentFactory
      * </table>
      *
      * @param HtmlNode $element
-     * @param Inky $inkyInstance
+     * @param InkyPHP $inkyInstance
      *
      * @return HtmlNode
      */
-    protected function parseResponsive(HtmlNode $element, Inky $inkyInstance)
+    protected function parseResponsive(HtmlNode $element, InkyPHP $inkyInstance)
     {
         $sizes = [];
         if($element->getAttribute('size-sm'))

@@ -25,11 +25,11 @@ class BlockGridFactory extends AbstractComponentFactory
      * </table>
      *
      * @param HtmlNode $element
-     * @param Inky $inkyInstance
+     * @param InkyPHP $inkyInstance
      *
      * @return HtmlNode
      */
-    public function parse(HtmlNode $element, Inky $inkyInstance)
+    public function parse(HtmlNode $element, InkyPHP $inkyInstance)
     {
         $upAttribute = (string) $element->getAttribute('up');
         $table = $this->table(array('class' => trim(sprintf(

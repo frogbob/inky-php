@@ -19,11 +19,11 @@ class CenterFactory extends AbstractComponentFactory
 
     /**
      * @param HtmlNode $element
-     * @param Inky $inkyInstance
+     * @param InkyPHP $inkyInstance
      *
      * @return HtmlNode
      */
-    public function parse(HtmlNode $element, Inky $inkyInstance)
+    public function parse(HtmlNode $element, InkyPHP $inkyInstance)
     {
         $isParsed = true;
         foreach($element->getChildren() as $childElement) {

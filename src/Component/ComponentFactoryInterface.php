@@ -17,10 +17,10 @@ interface ComponentFactoryInterface
 
     /**
      * @param HtmlNode $element
-     * @param Inky $inkyInstance
+     * @param InkyPHP $inkyInstance
      *
      * @return AbstractNode|Collection
      */
-    public function parse(HtmlNode $element, Inky $inkyInstance);
+    public function parse(HtmlNode $element, InkyPHP $inkyInstance);
 
 }

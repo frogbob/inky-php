@@ -22,11 +22,11 @@ class RawFactory extends AbstractComponentFactory
      * <%= test %>
      *
      * @param HtmlNode $element
-     * @param Inky $inkyInstance
+     * @param InkyPHP $inkyInstance
      *
      * @return TextNode
      */
-    public function parse(HtmlNode $element, Inky $inkyInstance)
+    public function parse(HtmlNode $element, InkyPHP $inkyInstance)
     {
         return new TextNode($element->innerHtml());
     }

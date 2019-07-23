@@ -34,11 +34,11 @@ class MenuFactory extends AbstractComponentFactory
      *  </table>
      *
      * @param HtmlNode $element
-     * @param Inky $inkyInstance
+     * @param InkyPHP $inkyInstance
      *
      * @return HtmlNode
      */
-    public function parse(HtmlNode $element, Inky $inkyInstance)
+    public function parse(HtmlNode $element, InkyPHP $inkyInstance)
     {
         $table = $this->table($element->getAttributes());
         $this->addCssClass('menu', $table);

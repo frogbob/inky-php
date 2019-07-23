@@ -36,7 +36,18 @@ class InkyPHP
      */
     protected $gridColumns;
 
-    public function __construct($gridColumns = 12, $componentFactories = array())
+    protected $options = [
+        'whitespaceTextNode' => true,
+        'strict'             => false,
+        'enforceEncoding'    => null,
+        'cleanupInput'       => true,
+        'removeScripts'      => false,
+        'removeStyles'       => false,
+        'preserveLineBreaks' => false,
+        'removeDoubleSpace'  => true,
+    ];
+
+    public function __construct($gridColumns = 12, $componentFactories = array(), $options = array())
     {
         $this->setGridColumns($gridColumns);
         $this->addComponentFactory(new RowFactory());
@@ -53,6 +64,7 @@ class InkyPHP
         $this->addComponentFactory(new CenterFactory());
         $this->addComponentFactory(new RawFactory());
 
+        $this->config = array_merge($this->config, $config);
 
         foreach($componentFactories as $componentFactory) {
             if($componentFactory instanceof ComponentFactoryInterface) {
@@ -172,10 +184,7 @@ class InkyPHP
     public function releaseTheKraken($html)
     {
         $dom = new Dom();
-        $dom->setOptions([
-            'removeStyles' => false,
-            'removeScripts' => false,
-        ]);
+        $dom->setOptions($this->options);
         $dom->load((string) $html);
 
         $parseCounter = 0;

@@ -50,11 +50,11 @@ class ColumnsFactory extends AbstractComponentFactory
      *
      *
      * @param HtmlNode $element
-     * @param Inky $inkyInstance
+     * @param InkyPHP $inkyInstance
      *
      * @return HtmlNode
      */
-    public function parse(HtmlNode $element, Inky $inkyInstance)
+    public function parse(HtmlNode $element, InkyPHP $inkyInstance)
     {
         // This is a hack for no-expander because PhpDomParser doesn't seem to support value-less attributes.
         $outerHtml = $element->outerHtml();
@@ -165,7 +165,7 @@ class ColumnsFactory extends AbstractComponentFactory
 
     }
 
-    protected function hasRowChild(HtmlNode $element, Inky $inkyInstance)
+    protected function hasRowChild(HtmlNode $element, InkyPHP $inkyInstance)
     {
         $rowTags = $inkyInstance->getAllAliasForTagName('row');
         //check if element is a row
