@@ -2,6 +2,7 @@
   "name": "frogbob/inky-php",
   "description": "PHP Implementation of ZURB's Foundation for Email parser - Based on thampe/inky",
   "keywords": ["php", "inky", "reponsive-emails"],
+
   "license": "MIT",
   "authors": [
     {
@@ -12,5 +13,10 @@
   "require": {
     "php": ">=5.4.0",
     "paquettg/php-html-parser": "^1.7"
-  }
+  },
+  "autoload": {
+    "psr-4": {
+      "Frogbob\\InkyPHP\\": "src/"
+    }
+  },
 }
