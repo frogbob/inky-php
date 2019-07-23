@@ -1,0 +1,16 @@
+{
+  "name": "frogbob/inky-php",
+  "description": "PHP Implementation of ZURB's Foundation for Email parser - Based on thampe/inky",
+  "keywords": ["php", "inky", "reponsive-emails"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Freerk van Zeijl",
+      "email": "freerk.vanzeijl@ultrabold.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "paquettg/php-html-parser": "^1.7"
+  }
+}
