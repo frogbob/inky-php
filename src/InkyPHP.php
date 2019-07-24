@@ -64,7 +64,7 @@ class InkyPHP
         $this->addComponentFactory(new CenterFactory());
         $this->addComponentFactory(new RawFactory());
 
-        $this->config = array_merge($this->config, $config);
+        $this->options = array_merge($this->options, $options);
 
         foreach($componentFactories as $componentFactory) {
             if($componentFactory instanceof ComponentFactoryInterface) {
