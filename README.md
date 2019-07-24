@@ -83,3 +83,4 @@ $inky->releaseTheKraken('<test></test>');
 
 ## License
 See the [LICENSE](LICENSE) file for license info (it's the MIT license).
+

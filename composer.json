@@ -1,5 +1,6 @@
 {
   "name": "frogbob/inky-php",
+  "version": "0.0.1",
   "description": "PHP Implementation of ZURB's Foundation for Email parser - Based on thampe/inky",
   "keywords": ["php", "inky", "reponsive-emails"],
   "license": "MIT",
